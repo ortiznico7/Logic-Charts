@@ -1,59 +1,19 @@
-# ALG1 = input( "Do you struggle with Algebra 1 skills? " )
-# if ALG1 == "Yes":
-#     print("Looks like you need help with ALGEBRA 1 skills.")
-#     print("We will add this to your study plan. You may proceed.")
-# elif ALG1 == "No"
-#     print("You may continue to the next question.")
-# else:
-#     print("Please type again, you may have typed something incorrectly.")
-# GEO = input( "Do you struggle with Geometry skills? " )
-# if GEO == "Yes":
-#     print("Looks like you need help with GEOMETRY skills.")
-#     print("We will add this to your study plan. You may proceed.")
-# else:
-#     print("You may continue to the next question.")
-# ALG2 = input( "Do you struggle with Algebra 2 skills? " )
-# if ALG2 == "Yes":
-#     print("Looks like you need help with ALGEBRA 2 skills.")
-#     print("We will add this to your study plan. You may proceed.")
-# elif ALG2 == "No":
-#     print("You may continue to the next question.")
-# else:
-#     print("Please type again, you may have typed something incorrectly.")
-# PCALC = input( "Do you struggle with Pre-Calculus skills? ")
-# if PCALC == "Yes":
-#     print("Looks like you need help with PRECALCULUS skills.")
-#     print("We will add this to your study plan. You may proceed.")
-# else:
-#     print("You may continue to the next question.")
-# CALC = input ( "Do you struggle with Calculus skills? " )
-# if CALC == "Yes":
-#     print("Looks like you need help with CALCULUS skills.")
-#     print("We will add this to your study plan. You may proceed.")
-# else:
-#     print("You may continue to the next question.")
-# TRIG = input ( "Do you struggle with Trigonometry skills? ")
-# if TRIG == "Yes":
-#     print("Looks like you need help with TRIGONOMETRY skills.")
-#     print("We will add this to your study plan. You may proceed.")
-# else:
-#     print("You may continue to the next question.")
-# COLLG = input ( "Have you ever taken any college level Math courses? " )
-# if COLLG == "Yes":
-#     print("Great! You may continue to the next question.")
-# else:
-#     print("You may continue to the next question. This topic might come up later.")
-# STUDY = input ( "Is math one of the school topics you study most? " )
-# if STUDY == "Yes":
-#     print("Great! You may continue to the next question.")
-# else:
-#     print("You may continue to the next question. This topic might come up later.")
-# REGBASIS = input ( "Do you study math on a regular basis? " )
-# if REGBASIS == "Yes":
-#     print("Great! You may continue to the next question.")
-# else:
-#     print("You may continue to the next question. This topic might come up later.")
+def quizquestions(question, answer):
+    test = False
+    while test is False:
+        result = input(question + ":")
+        if result == answer:
+            print("Correct! You may proceed.")
+            test = True
 
+        else:
+            
+            test == False
+            
+            print("Incorrect. Try again.")
+
+
+correct=0
 
 questionBank = ["Do you struggle with Algebra 1 skills?", "Do you struggle with Geometry skills?", "Do you struggle with Algebra 2 skills?", "Do you struggle with PreCalculus skills?", "Do you struggle with Calculus skills?",  "Do you struggle with Trigonometry skills?"]
 for question in questionBank:
@@ -80,66 +40,75 @@ for question in questionBank:
 
             test = False
             print("Enter a valid input")
-questionBank = ["What is the square root of 576?"]
-for question in questionBank:
 
-    test = False
+questionBank = ["What is the square root of 576?", "If 55 = 6x + 7, what is the value of x?", "What is the zero of the following function: (x+7)?"]
+answerBank = ["36", "8", "-7"]
 
-    while test is False:
+for index in range(len(questionBank)):
+    quizquestions(questionBank[index], answerBank[index])
 
-        userInput = input(question + ":")
+# for question in questionBank:
 
-        if userInput.lower() == "36":
+#     test = False
 
-            test = True
+#     while test is False:
 
-            print("Correct! You may proceed.")
+#         userInput = input(question + ":")
 
-        else:
+#         if userInput.lower() == "36":
 
-            test = False
+#             test = True
 
-            print("Incorrect. Try again.")
-questionBank = ["If 55 = 6x + 7, what is the value of x?"]
-for question in questionBank:
+#             print("Correct! You may proceed.")
+#             correct+=1
 
-    test = False
+#         else:
 
-    while test is False:
+#             test = False
 
-        userInput = input(question + ":")
+#             print("Incorrect. Try again.")
+# questionBank = ["If 55 = 6x + 7, what is the value of x?"]
+# for question in questionBank:
 
-        if userInput.lower() == "8":
+#     test = False
 
-            test = True
+#     while test is False:
 
-            print("Correct! You may proceed.")
+#         userInput = input(question + ":")
 
-        else:
+#         if userInput.lower() == "8":
 
-            test = False
+#             test = True
+
+#             print("Correct! You may proceed.")
+#             correct+=1
+
+#         else:
+
+#             test = False
             
-            print("Incorrect. Try again.")
-questionBank = ["What is the zero of the following function: (x + 7)?"]
-for question in questionBank:
+#             print("Incorrect. Try again.")
+# questionBank = ["What is the zero of the following function: (x + 7)?"]
+# for question in questionBank:
 
-    test = False
+#     test = False
 
-    while test is False:
+#     while test is False:
 
-        userInput = input(question + ":")
+#         userInput = input(question + ":")
 
-        if userInput.lower() == "-7":
+#         if userInput.lower() == "-7":
 
-            test = True
+#             test = True
 
-            print("Correct! You may proceed.")
+#             print("Correct! You may proceed.")
+#             correct+=1
 
-        else:
+#         else:
 
-            test = False
+#             test = False
             
-            print("Incorrect. Try again.")
+#             print("Incorrect. Try again.")
 
 
 proceedNOW = False
@@ -162,11 +131,3 @@ while  proceedNOW is False:
 
             proceedNow = False
             print("Enter a valid input")
-
-
-
-
-
-
-        
-
