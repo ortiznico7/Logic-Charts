@@ -1,3 +1,4 @@
+# generated responses depending on the answer
 def quizquestions(question, answer):
     test = False
     while test is False:
@@ -14,6 +15,8 @@ def quizquestions(question, answer):
 
 
 correct=0
+
+# questions to help user in the case of struggle
 
 questionBank = ["Do you struggle with Algebra 1 skills?", "Do you struggle with Geometry skills?", "Do you struggle with Algebra 2 skills?", "Do you struggle with PreCalculus skills?", "Do you struggle with Calculus skills?",  "Do you struggle with Trigonometry skills?"]
 for question in questionBank:
@@ -113,6 +116,8 @@ for index in range(len(questionBank)):
 
 proceedNOW = False
 
+# asks whether the user is interested in continuing the quiz or not
+
 while  proceedNOW is False:
         userInput = input( "Would you like to proceed with this mini-quiz?" )
 
@@ -120,11 +125,15 @@ while  proceedNOW is False:
         
             proceedNOW = True
 
+            # answer if user doesn't want to continue
+
             print ("Thank you for your responses! We will have your study plan ready in a day or two.")
 
         elif userInput.lower() == "yes":
 
             proceedNOW = True
+
+            # answer if user does want to continue
 
             print("You will be redirected to continue soon. Please wait patiently for the link.")
         else:
